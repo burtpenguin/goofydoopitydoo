@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter Combination Translator</title>
+  <script>
+    function customTranslate() {
+      var userInput = document.getElementById("userInput").value;
+
+      var replacements = [
+        ["eer", "epar"],
+        ["ure", "eton"],
+        ["ade", "edun"],
+        ["ave", "epvnor"],
+        ["call", "rüpa"],
+        ["erve", "etr"],
+        ["een", "est"],
+        ["pro", "uber"],
+        ["ough", "enwi"],
+        ["umb", "arpen"],
+        ["ex", "alok"],
+        ["ayed", "eton"],
+        ["ank", "enkrek"],
+        ["ole", "uchon"],
+        ["cen", "sojr"],
+        ["ange", "anko"],
+        ["have", "haket"],
+        ["if", "wun"],
+        ["am", "iv"],
+        ["ing", "anoy"],
+        ["in", "eun"],
+        ["tab", "vanno"],
+        ["ere", "elta"],
+        ["ear", "egla"],
+        ["tw", "tsj"],
+        ["ium", "oz"],
+        ["ibe", "ijen"],
+        ["ace", "apts"],
+        ["arm", "epa"],
+        ["rce", "id"],
+        ["rse", "id"],
+        ["igh", "ern"],
+        ["ike", "ënk"],
+        ["ous", "il"],
+        ["ard", "enak"],
+        ["ude", "euëg"],
+        ["uf", "eb"],
+        ["of", "oven"],
+        ["from", "ven"],
+        ["or", "urr"],
+        ["ame", "aure"],
+        ["oul", "auk"],
+        ["nce", "njo"],
+        ["ine", "ott"],
+        ["old", "aul"],
+        ["ble", "prë"],
+        ["ght", "rur"],
+        ["ome", "eam"],
+        ["ive", "ok"],
+        ["ov", "oë"],
+        ["ke", "get"],
+        ["ple", "mounn"],
+        ["has", "hald"],
+        ["w", "v"],
+        ["alk", "ecken"],
+        ["irl", "inne"],
+        ["y", "ia"],
+        ["t", "dt"],
+        ["au", "ä"],
+        ["u", "ü"],
+        ["ai", "ey"],
+        ["oo", "ou"],
+        ["ss", "scë"],
+        ["Deo", "craig"],
+        ["ot", "ar"],
+        ["ea", "ahn"],
+        ["ote", "eyt"],
+        ["oat", "uet"],
+        ["sh", "sy"],
+        ["af", "age"],
+        ["is", "est"],
+        ["on", "ana"],
+        ["ei", "eyu"],
+        ["ough", "ëaw"],
+        ["th", "dëh"],
+        ["ll", "lsker"],
+        ["ial", "ek"],
+        ["ly", "lik"],
+        ["er", "arn"],
+        ["can", "cou"],
+        ["ph", "uin"],
+        ["end", "idel"],
+        ["so", "toa"],
+        ["ick", "aën"],
+        ["ic", "aën"],
+        ["ang", "erla"],
+        ["co", "shae"],
+        ["act", "apel"],
+        ["acdt", "apel"],
+        ["and", "oket"]
+      ];
+
+      // Perform replacements
+      for (var i = 0; i < replacements.length; i++) {
+        var pattern = replacements[i][0];
+        var replacement = replacements[i][1];
+        var regex = new RegExp(pattern, "gi");
+
+        userInput = userInput.replace(regex, replacement);
+      }
+
+      // Display the translated text
+      document.getElementById("output").textContent = userInput;
+    }
+  </script>
+</head>
+<body>
+  <label for="userInput">Enter text:</label>
+  <input type="text" id="userInput">
+  <button onclick="customTranslate()">Translate</button>
+
+  <p id="output"></p>
+</body>
+</html>
